@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="row" style="padding-top: 3%;">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h1>{{title}}</h1>
+                    <h4 style="color: red; text-align: center;">{{form.message}}</h4>
+                    <br>
+                    <span>Login Id </span> :
+                    <input type="text" name="loginId" [(ngModel)]="form.loginId" class="form-control">
+                    <p style="color: red;">{{inputerror.loginId}}</p>
+
+                    <span>Password </span> :
+                    <input type="password" name="password" [(ngModel)]="form.password" class="form-control">
+                    <p style="color: red;">{{inputerror.password}}</p>
+
+                    <br>
+                    <button (click)="signIn()" class="btn btn-md btn-success">LOGIN</button>
+                    &nbsp; &nbsp;<button routerLink="/signup" class="btn btn-md btn-success">SIGNUP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

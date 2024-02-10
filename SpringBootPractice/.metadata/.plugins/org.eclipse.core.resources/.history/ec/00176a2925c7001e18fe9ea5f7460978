@@ -1,0 +1,22 @@
+package com.mongodb.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mongodb.dto.Books;
+import com.mongodb.service.BooksService;
+
+@RestController
+public class BooksController {
+	@Autowired
+	BooksService service;
+	
+	//save
+	public String save(@RequestBody Books book) {
+		int bookId = service.saveBooks(book);
+		return "data added successfully"+bookId;
+		
+	}
+
+}

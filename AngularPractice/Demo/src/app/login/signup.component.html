@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="row" style="padding-top: 2%; margin-bottom: 10%;">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h1>{{title}}</h1>
+                    <h5 style="color: green; text-align: center;">{{message}}</h5>
+                    <span>First Name </span> :
+                    <input type="text" name="firstName" [(ngModel)]="form.firstName" class="form-control">
+                    <p style="color: red;">{{inputerror.firstName}}</p>
+                    <span>Last Name </span> :
+                    <input type="text" name="lastName" [(ngModel)]="form.lastName" class="form-control">
+                    <p style="color: red;">{{inputerror.lastName}}</p>
+                    <span>Login Id </span> :
+                    <input type="text" name="loginId" [(ngModel)]="form.loginId" class="form-control">
+                    <p style="color: red;">{{inputerror.loginId}}</p>
+                    <span>Password </span> :
+                    <input type="password" name="password" [(ngModel)]="form.password" class="form-control">
+                    <p style="color: red;">{{inputerror.password}}</p>
+
+
+                    <span>DOB </span> :
+                    <input type="date" name="dob" [(ngModel)]="form.dob" class="form-control">
+                    <br>
+                    <button (click)="signUp()" class="btn btn-md btn-success">SIGNUP</button>
+                    &nbsp; &nbsp;<button routerLink="/login" class="btn btn-md btn-success">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

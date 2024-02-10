@@ -1,0 +1,33 @@
+package com.mongodb.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mongodb.dao.BooksRepository;
+import com.mongodb.dto.Books;
+
+@Service
+public class BooksService {
+	@Autowired
+	BooksRepository booksRepository;
+	
+	//save
+	public int saveBooks(Books book) {
+		booksRepository.save(book);
+		return book.getBookId();
+		
+	}
+	
+	
+	//update
+	public void updateBook(Books book) {
+		
+		Books books = new Books();
+		books.setBookId(book.getBookId());
+		books.setBookname(book.getBookName());
+		books.setAuthor(book.getAuthor());
+		books.setPrice(book.getPrice());
+		
+		booksRepository.save(books);
+	}
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\PRACTICE\SpringBootPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\798657340.index
+\HibernatePractice\src\main\resources

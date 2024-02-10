@@ -1,0 +1,12 @@
+package com.jpa.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BooksController {
+	
+	public String saveBook() {
+		return "Data added successfully!!!!"
+	}
+
+}

@@ -1,0 +1,13 @@
+<header style="background-color: #C2B280;  width: auto; padding: 10px; height: 65px;" >
+    <br>
+    <ng-container *ngIf="isLogin(); else elseBlock">
+        <b>Hi, ({{form.data.fname}} {{form.data.lname}})</b>&nbsp;&nbsp;&nbsp;
+        <a routerLink="/user">Add User</a> |
+        <a routerLink="/userlist">User List</a> |
+        <a href="" (click)="logout()">Log Out</a>
+
+    </ng-container>
+    <ng-template #elseBlock>
+        <b>Hi, Guest</b>
+    </ng-template>
+</header>

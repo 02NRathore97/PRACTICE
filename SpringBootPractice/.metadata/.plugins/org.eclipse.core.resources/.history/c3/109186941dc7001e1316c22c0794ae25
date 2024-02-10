@@ -1,0 +1,5 @@
+package com.mongodb.dto;
+
+public class Books {
+
+}
